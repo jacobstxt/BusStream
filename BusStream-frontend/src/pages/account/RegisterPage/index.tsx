@@ -2,7 +2,7 @@ import React from "react";
 
 const RegisterPage: React.FC = () => {
     return (
-        <div className="p-5 min-h-screen flex items-center justify-center bg-gray-50 ">
+        <div className="p-5 min-h-screen flex items-center justify-center bg-white dark:bg-gray-900">
             <div className="max-w-[900px] w-full rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.1)] dark:shadow-gray-800">
                 <div className="grid md:grid-cols-2">
 
@@ -24,7 +24,7 @@ const RegisterPage: React.FC = () => {
                         <form className="space-y-5">
 
                             <div>
-                                <label className="block mb-1 font-medium text-gray-700">
+                                <label className="block mb-1 font-medium ">
                                     Прізвище
                                 </label>
                                 <input
@@ -39,7 +39,7 @@ const RegisterPage: React.FC = () => {
                             </div>
 
                             <div>
-                                <label className="block mb-1 font-medium text-gray-700 ">
+                                <label className="block mb-1 font-medium">
                                     Ім’я
                                 </label>
                                 <input
