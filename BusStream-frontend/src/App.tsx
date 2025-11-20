@@ -1,16 +1,18 @@
 import './App.css'
-import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import MainLayout from "./Layout/MainLayout.tsx";
+import {Route, Routes} from "react-router-dom";
+import MainLayout from "./layout/MainLayout.tsx";
+import UserHomePage from "./pages/public/UserHomePage";
+import RegisterPage from "./pages/account/RegisterPage";
 
 function App() {
     return (
-        <Router>
             <Routes>
                 <Route path="/" element={<MainLayout/>}>
+                    <Route index element={<UserHomePage/>}></Route>
 
+                    <Route path={'login'} element={<RegisterPage/>}></Route>
                 </Route>
             </Routes>
-        </Router>
     )
 }
 
