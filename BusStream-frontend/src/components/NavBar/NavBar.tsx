@@ -3,8 +3,7 @@ import {Link} from "react-router";
 export const NavBar = () => {
     return (
         <>
-            <header
-                className="flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white text-sm py-3 dark:bg-gray-900">
+            <header className="w-full py-2 px-6 bg-gray-50 dark:bg-gray-900 shadow-md flex justify-between items-center border-b border-gray-200 dark:border-gray-800">
                 <nav
                     className="max-w-[85rem] w-full mx-auto px-4 flex flex-wrap basis-full items-center justify-between">
                     <a className="sm:order-1 flex-none text-xl font-semibold dark:text-white focus:outline-hidden focus:opacity-80"
@@ -33,17 +32,33 @@ export const NavBar = () => {
                         </button>
 
                         <div className="sm:order-3 flex items-center gap-x-2">
-                            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
+                            <ul className="
+                                font-medium flex flex-col p-4 md:p-0 mt-4 border border-default
+                                rounded-base
+                                bg-neutral-secondary-soft dark:bg-gray-800
+                                md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0
+                                md:bg-neutral-primary md:dark:bg-gray-900
+                            ">
                                 <li>
-                                    <Link to={"/login"}
-                                          className="block py-2 px-3 bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
-                                          aria-current="page">Login</Link>
+                                    <Link
+                                        to="/login"
+                                        className="block py-2 px-3 rounded bg-brand text-white
+                                        md:bg-transparent md:text-fg-brand md:p-0
+                                        dark:bg-transparent dark:text-white"
+                                    >
+                                        Login
+                                    </Link>
                                 </li>
+
                                 <li>
                                     <Link to={"/register"}
-                                          className="block py-2 px-3 bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
-                                          aria-current="page">Register</Link>
+                                          className="block py-2 px-3 rounded bg-brand text-white
+                                    md:bg-transparent md:text-fg-brand md:p-0
+                                    dark:bg-transparent dark:text-white"
+                                    >Register
+                                    </Link>
                                 </li>
+
                             </ul>
                         </div>
 

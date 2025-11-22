@@ -5,13 +5,15 @@ import Footer from "../components/Footer/Footer.tsx";
 export default function MainLayout() {
     return (
         <>
-            <div className={"container mx-auto"}></div>
+            <div className={"container mx-auto"}>
             <Navbar />
 
             <main>
                 <Outlet />
             </main>
+
             <Footer />
+            </div>
         </>
     );
 }
