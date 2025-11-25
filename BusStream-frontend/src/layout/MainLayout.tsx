@@ -4,16 +4,18 @@ import Footer from "../components/Footer/Footer.tsx";
 
 export default function MainLayout() {
     return (
-        <>
-            <div className={"container mx-auto"}>
-            <Navbar />
+            <div className={"container mx-auto bg-[var(--bg)] text-[var(--fg)]"}>
 
-            <main>
-                <Outlet />
-            </main>
+                <Navbar />
 
-            <Footer />
+                <main className="py-5 transition-colors">
+                    <div className="container mx-auto">
+                        <Outlet />
+                    </div>
+                </main>
+
+                <Footer />
+
             </div>
-        </>
     );
 }
