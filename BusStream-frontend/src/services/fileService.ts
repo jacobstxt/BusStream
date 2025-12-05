@@ -2,6 +2,7 @@ import {createApi} from "@reduxjs/toolkit/query/react";
 import {createBaseQuery} from "../utils/CreateBaseQuery";
 import { serialize } from "object-to-formdata";
 import type {ISaveImageFile} from "../types/file/ISaveImageFile.ts";
+import type {ISavedImage} from "../types/file/ISavedImage.ts";
 
 export const fileService = createApi({
     reducerPath: 'fileService',
@@ -9,7 +10,7 @@ export const fileService = createApi({
     tagTypes: ['Files'],
 
     endpoints: (builder) => ({
-        saveImage: builder.mutation<string, ISaveImageFile>({
+        saveImage: builder.mutation<ISavedImage, ISaveImageFile>({
             query: (body) => {
                 const formData = serialize(body);
 
@@ -20,11 +21,23 @@ export const fileService = createApi({
                 };
             },
             invalidatesTags: ["Files"]
+        }),
+
+        saveImageFromUrl: builder.mutation<ISavedImage, string>({
+            query: (url) => {
+                return {
+                    url: '/saveImageFromUrl',
+                    method: "POST",
+                    body: url
+                };
+            },
+            invalidatesTags: ["Files"]
         })
 
     }),
 });
 
 export const {
-    useSaveImageMutation
+    useSaveImageMutation,
+    useSaveImageFromUrlMutation
 } = fileService;

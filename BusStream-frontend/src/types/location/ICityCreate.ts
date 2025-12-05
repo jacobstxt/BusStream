@@ -10,5 +10,6 @@ export interface ICityCreate {
     avgMealPrice?: number;
     avgHotelPrice?: number;
     hasRecreationalWater?: boolean;
+    descriptionImageIds: [];
 }
  
